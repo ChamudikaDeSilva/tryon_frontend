@@ -72,8 +72,8 @@ return (
                     { name: "firstName", type: "text", placeholder: "First Name" },
                     { name: "lastName", type: "text", placeholder: "Last Name" },
                     { name: "username", type: "text", placeholder: "Username" },
-                    { name: "phoneNumber", type: "text", placeholder: "Phone Number" },
-                    { name: "address", type: "text", placeholder: "Address" },
+                    // { name: "phoneNumber", type: "text", placeholder: "Phone Number" },
+                    // { name: "address", type: "text", placeholder: "Address" },
                     { name: "email", type: "email", placeholder: "Email" },
                     { name: "password", type: "password", placeholder: "Password" },
                         

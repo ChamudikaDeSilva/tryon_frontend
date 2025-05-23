@@ -1,6 +1,7 @@
 "use client";
 import { useState, ChangeEvent, FormEvent } from "react";
 import { useAuth } from "@/hooks/useAuth";
+import Link from "next/link";
 
 interface LoginFormData {
   username: string;
@@ -88,12 +89,12 @@ export default function LoginForm() {
             </button>
             <p className="text-sm mt-6 text-center text-gray-800">
               Don't have an account?
-              <a
+              <Link
                 href="/register"
                 className="text-[#1E2772] font-medium hover:underline ml-1 whitespace-nowrap"
               >
                 Register here
-              </a>
+              </Link>
             </p>
           </div>
 
