@@ -45,8 +45,8 @@ export default function RegisterForm() {
 };
 
 return (
-    <div className="bg-white w-full max-w-xl flex flex-col items-center justify-center p-4">
-        <div className="w-full border border-gray-200 p-8 rounded-md bg-gray-100">
+    <div className="w-full max-w-xl flex flex-col items-center justify-center p-4">
+      <div className="w-full p-8 rounded-xl border border-white/20 bg-white/10 backdrop-blur-md shadow-lg">
             <div className="text-center mb-6">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ return (
                         value={formData[name as keyof RegisterFormData]}
                         onChange={handleChange}
                         required
-                        className="w-full text-sm text-gray-800 bg-white border-2 border-transparent focus:border-[#1E2772] pl-4 pr-4 py-3 rounded-md outline-none"
+                        className="w-full text-sm text-gray-800 bg-white border-2 border-transparent focus:border-[#1E2772] pl-4 pr-4 py-3 rounded-md outline-none backdrop-blur-sm"
                     />
                     </div>
                 ))}
@@ -95,11 +95,11 @@ return (
                 <div className="mt-6">
                     <button
                         type="submit"
-                        className="w-full py-2.5 px-4 text-[15px] font-medium rounded-md text-white bg-[#1E2772] hover:bg-[#1e4272] focus:outline-none"
+                        className="w-full py-2.5 px-4 text-[15px] font-medium rounded-md text-white bg-[#1E2772] hover:bg-[#1e4272] focus:outline-none backdrop-blur-sm"
                     >
                         Register
                     </button>
-                    <p className="text-sm mt-6 text-center text-gray-800">
+                    <p className="text-sm mt-6 text-center text-white">
                         Already have an account?
                         <Link href="/login" className="text-[#1E2772] font-medium hover:underline ml-1 whitespace-nowrap">
                             Login here

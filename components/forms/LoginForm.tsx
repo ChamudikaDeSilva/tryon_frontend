@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, ChangeEvent, FormEvent } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import Link from "next/link";
@@ -9,7 +10,7 @@ interface LoginFormData {
 }
 
 export default function LoginForm() {
-  const { login } = useAuth(); // assumes you have a login function in useAuth
+  const { login } = useAuth();
   const [formData, setFormData] = useState<LoginFormData>({
     email: "",
     password: "",
@@ -35,8 +36,8 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="bg-white w-full max-w-xl flex flex-col items-center justify-center p-4">
-      <div className="w-full border border-gray-200 p-8 rounded-md bg-gray-100">
+    <div className="w-full max-w-xl flex flex-col items-center justify-center p-4">
+      <div className="w-full p-8 rounded-xl border border-white/20 bg-white/10 backdrop-blur-md shadow-lg">
         <div className="text-center mb-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,11 +62,11 @@ export default function LoginForm() {
             <input
               name="email"
               type="email"
-              placeholder="email"
+              placeholder="Email"
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full text-sm text-gray-800 bg-white border-2 border-transparent focus:border-[#1E2772] pl-4 pr-4 py-3 rounded-md outline-none"
+              className="w-full text-sm text-gray-800 bg-white/80 border-2 border-transparent focus:border-[#1E2772] pl-4 pr-4 py-3 rounded-md outline-none backdrop-blur-sm"
             />
           </div>
           <div className="relative">
@@ -76,7 +77,7 @@ export default function LoginForm() {
               value={formData.password}
               onChange={handleChange}
               required
-              className="w-full text-sm text-gray-800 bg-white border-2 border-transparent focus:border-[#1E2772] pl-4 pr-4 py-3 rounded-md outline-none"
+              className="w-full text-sm text-gray-800 bg-white/80 border-2 border-transparent focus:border-[#1E2772] pl-4 pr-4 py-3 rounded-md outline-none backdrop-blur-sm"
             />
           </div>
 
@@ -87,7 +88,7 @@ export default function LoginForm() {
             >
               Login
             </button>
-            <p className="text-sm mt-6 text-center text-gray-800">
+            <p className="text-sm mt-6 text-center text-white">
               Don't have an account?
               <Link
                 href="/register"
@@ -98,8 +99,8 @@ export default function LoginForm() {
             </p>
           </div>
 
-          {error && <p className="text-sm text-red-600 text-center">{error}</p>}
-          {success && <p className="text-sm text-green-600 text-center">{success}</p>}
+          {error && <p className="text-sm text-red-500 text-center">{error}</p>}
+          {success && <p className="text-sm text-green-500 text-center">{success}</p>}
         </form>
       </div>
     </div>
