@@ -2,6 +2,6 @@ import type { RegisterFormData as SchemaType } from "@/lib/validation/registerSc
 
 export type RegisterFormData = SchemaType;
 export interface LoginFormData {
-  username: string;
+  email: string;
   password: string;
 }

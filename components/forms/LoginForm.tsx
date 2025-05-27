@@ -4,14 +4,14 @@ import { useAuth } from "@/hooks/useAuth";
 import Link from "next/link";
 
 interface LoginFormData {
-  username: string;
+  email: string;
   password: string;
 }
 
 export default function LoginForm() {
   const { login } = useAuth(); // assumes you have a login function in useAuth
   const [formData, setFormData] = useState<LoginFormData>({
-    username: "",
+    email: "",
     password: "",
   });
 
@@ -59,10 +59,10 @@ export default function LoginForm() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="relative">
             <input
-              name="username"
-              type="text"
-              placeholder="Username"
-              value={formData.username}
+              name="email"
+              type="email"
+              placeholder="email"
+              value={formData.email}
               onChange={handleChange}
               required
               className="w-full text-sm text-gray-800 bg-white border-2 border-transparent focus:border-[#1E2772] pl-4 pr-4 py-3 rounded-md outline-none"
