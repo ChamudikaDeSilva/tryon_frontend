@@ -33,7 +33,7 @@ export default function RegisterForm() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted"); 
+    //console.log("Form submitted"); 
     const result = await register(formData);
     if (result.success) {
         setSuccess("Registered successfully");
