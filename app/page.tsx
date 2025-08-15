@@ -1,5 +1,7 @@
 'use client';
+import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
+import Hero from "@/components/home/hero";
 
 export default function Home() {
   return (
@@ -9,7 +11,9 @@ export default function Home() {
       {/* <div className="px-4 sm:px-6 lg:px-8">
         <Navbar />
       </div> */}
-<Navbar />
+      <Navbar />
+      <Hero />
+      <Footer />
       {/* Main Content */}
 
    
