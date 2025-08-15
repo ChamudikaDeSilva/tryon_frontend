@@ -32,7 +32,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative w-full h-full overflow-hidden"
+      className="relative px-16 py-4 w-full h-full overflow-hidden"
       style={{ height: `calc(95dvh - ${navHeight}px)` }}
     >
       <Swiper

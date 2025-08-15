@@ -26,6 +26,17 @@
   }
 }
 
+@keyframes wave {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-20px); }
+  100% { transform: translateX(0); }
+}
+
+.animate-wave {
+  animation: wave 6s ease-in-out infinite;
+}
+
+
 body {
   /* background: var(--background);
   color: var(--foreground); */
