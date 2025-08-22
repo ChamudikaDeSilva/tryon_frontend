@@ -62,6 +62,11 @@ export default function Navbar() {
               ))}
             </div>
 
+            <div className="px-2 sm:px-4 lg:px-6">
+              <button className="px-4 py-2 bg-red-600 text-white rounded-md text-sm font-semibold hover:bg-red-700 transition-colors"> Shop Now
+              </button>
+            </div>
+
             {/* Mobile Menu Button */}
             <div className="lg:hidden flex items-center">
               <button onClick={() => setIsOpen(true)}>
