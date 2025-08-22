@@ -30,27 +30,36 @@ export default function Navbar() {
             </div>
 
             {/* Center Nav Items */}
-            <div className="hidden lg:flex space-x-4 xl:space-x-6 items-center text-sm xl:text-base flex-1 justify-center">
-              <Link href="/" className="hover:text-gray-500 lg:text-xl mr-10">Home</Link>
-              <Link href="/about" className="hover:text-gray-500 lg:text-xl mr-10">About</Link>
-              <Link href="/shop" className="hover:text-gray-500 lg:text-xl mr-10">Shop</Link>
-              <Link href="/contact" className="hover:text-gray-500 lg:text-xl mr-10">Contact Us</Link>
+            <div className="hidden lg:flex space-x-8 items-center text-sm xl:text-base flex-1 justify-center">
+              {["Home", "About", "Shop", "Contact Us"].map((item, idx) => (
+                <Link
+                  key={idx}
+                  href={`/${item.toLowerCase().replace(/\s/g, '')}`}
+                  className="relative text-lg font-medium hover:text-black transition-colors 
+                             after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-red-500 
+                             hover:after:w-full after:transition-all after:duration-300"
+                >
+                  {item}
+                </Link>
+              ))}
             </div>
 
             {/* Right Side - Search + Icons */}
-            <div className="hidden lg:flex items-center space-x-4 flex-1 justify-end">
-              <Link href="/search" className="hover:text-gray-500 text-lg sm:text-xl">
-                <FaSearch />
-              </Link>
-              <Link href="/register" className="hover:text-gray-500 text-lg sm:text-xl">
-                <FaUser />
-              </Link>
-              <Link href="/cart" className="hover:text-gray-500 text-lg sm:text-xl">
-                <FaShoppingCart />
-              </Link>
-              <Link href="/wishlist" className="hover:text-gray-500 text-lg sm:text-xl">
-                <FaHeart />
-              </Link>
+            <div className="hidden lg:flex items-center space-x-3 flex-1 justify-end">
+              {[ 
+                { icon: FaSearch, link: "/search" },
+                { icon: FaUser, link: "/register" },
+                { icon: FaShoppingCart, link: "/cart" },
+                { icon: FaHeart, link: "/wishlist" }
+              ].map((Item, idx) => (
+                <Link
+                  key={idx}
+                  href={Item.link}
+                  className="p-2 text-black rounded-full border border-gray-700 hover:border-red-500 hover:-translate-y-1 transition-all duration-300"
+                >
+                  <Item.icon size={18} className="text-black" />
+                </Link>
+              ))}
             </div>
 
             {/* Mobile Menu Button */}
@@ -77,25 +86,36 @@ export default function Navbar() {
 
           {/* Menu Items */}
           <nav className="space-y-4 text-lg">
-            <Link href="/" onClick={() => setIsOpen(false)} className="block hover:text-gray-800">Home</Link>
-            <Link href="/about" onClick={() => setIsOpen(false)} className="block hover:text-gray-800">About</Link>
-            <Link href="/shop" onClick={() => setIsOpen(false)} className="block hover:text-gray-800">Shop</Link>
-            <Link href="/contact" onClick={() => setIsOpen(false)} className="block hover:text-gray-800">Contact Us</Link>
+            {["Home", "About", "Shop", "Contact Us"].map((item, idx) => (
+              <Link
+                key={idx}
+                href={`/${item.toLowerCase().replace(/\s/g, '')}`}
+                onClick={() => setIsOpen(false)}
+                className="block hover:text-gray-800 relative after:absolute after:left-0 after:bottom-0 
+                           after:w-0 after:h-[2px] after:bg-red-500 hover:after:w-full 
+                           after:transition-all after:duration-300"
+              >
+                {item}
+              </Link>
+            ))}
 
             {/* Icons */}
             <div className="flex space-x-4 pt-4 text-xl">
-              <Link href="/search" onClick={() => setIsOpen(false)} className="hover:text-gray-800">
-                <FaSearch />
-              </Link>
-              <Link href="/register" onClick={() => setIsOpen(false)} className="hover:text-gray-800">
-                <FaUser />
-              </Link>
-              <Link href="/cart" onClick={() => setIsOpen(false)} className="hover:text-gray-800">
-                <FaShoppingCart />
-              </Link>
-              <Link href="/wishlist" onClick={() => setIsOpen(false)} className="hover:text-gray-800">
-                <FaHeart />
-              </Link>
+              {[ 
+                { icon: FaSearch, link: "/search" },
+                { icon: FaUser, link: "/register" },
+                { icon: FaShoppingCart, link: "/cart" },
+                { icon: FaHeart, link: "/wishlist" }
+              ].map((Item, idx) => (
+                <Link
+                  key={idx}
+                  href={Item.link}
+                  onClick={() => setIsOpen(false)}
+                  className="p-2 rounded-full border border-gray-700 hover:border-red-500 hover:-translate-y-1 transition-all duration-300"
+                >
+                  <Item.icon size={18} className="text-black" />
+                </Link>
+              ))}
             </div>
           </nav>
         </div>
