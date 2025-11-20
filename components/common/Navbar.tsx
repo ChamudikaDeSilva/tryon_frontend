@@ -14,7 +14,7 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <nav className="bg-gray-100 py-2 text-black">
+      <nav className="bg-white py-2 text-black">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-14 sm:h-16">
 
