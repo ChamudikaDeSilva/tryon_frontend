@@ -20,15 +20,14 @@ export default function Navbar() {
 
             {/* Logo */}
             <div className="flex-shrink-0 flex-1">
-              <Link href="/" className="text-xl sm:text-2xl font-bold flex items-center">
+            <Link href="/" className="text-xl sm:text-2xl font-bold flex items-center">
                 <img
-                  src="/image/common/logo11.png"
-                  alt="logo"
-                  className="h-24 sm:h-28 w-auto object-contain"
+                    src="/image/common/gillian_black.png"
+                    alt="logo"
+                    className="h-8 md:h-10 w-auto object-contain"
                 />
-              </Link>
-            </div>
-
+            </Link>
+        </div>
             {/* Center Nav Items */}
             <div className="hidden lg:flex space-x-8 items-center text-sm xl:text-base flex-1 justify-center">
               {["Home", "About", "Shop", "Contact Us"].map((item, idx) => (
