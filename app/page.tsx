@@ -1,6 +1,7 @@
 'use client';
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
+import BestSellingShowcase from "@/components/home/bestSelling";
 import Hero from "@/components/home/hero";
 import Herotest from "@/components/home/herotest";
 import OurServices from "@/components/home/services";
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <OurServices />
+     <BestSellingShowcase />
       {/* <Herotest /> */}
       <Footer />
       {/* Main Content */}
