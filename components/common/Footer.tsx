@@ -34,9 +34,9 @@ export default function Footer() {
         
         {/* Brand */}
         <div>
-          <h2 className="text-white text-3xl font-bold mb-3 tracking-wide">Glamora</h2>
+          <h2 className="text-white text-3xl font-bold mb-3 tracking-wide">Gillian</h2>
           <p className="text-sm text-gray-400 leading-relaxed">
-            Discover the latest trends in fashion and elevate your style with our exclusive collections.
+              Protect your vision in style with our curated collection of high-quality eyewear and lens solutions.
           </p>
           {/* Social Icons */}
           <div className="flex gap-3 mt-5">
@@ -116,7 +116,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 py-5 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Glamora. All Rights Reserved.
+        © {new Date().getFullYear()} Gillian. All Rights Reserved.
       </div>
     </footer>
   );

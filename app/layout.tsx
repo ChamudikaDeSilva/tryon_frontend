@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Glamora",
-  description: "Own Your Glow",
+  title: "Gillian - Your Vision, Our Passion",
+  description: "Discover premium eyewear and lens solutions tailored for your unique style and vision needs at Gillian.",
 };
 
 export default function RootLayout({
