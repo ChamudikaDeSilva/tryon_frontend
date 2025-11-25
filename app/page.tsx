@@ -2,6 +2,7 @@
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import BestSellingShowcase from "@/components/home/bestSelling";
+import BookTestCTA from "@/components/home/bookTest";
 import Hero from "@/components/home/hero";
 import Herotest from "@/components/home/herotest";
 import OurServices from "@/components/home/services";
@@ -16,8 +17,10 @@ export default function Home() {
       </div> */}
       <Navbar />
       <Hero />
+      <BestSellingShowcase />
+     <BookTestCTA />
       <OurServices />
-     <BestSellingShowcase />
+     
       {/* <Herotest /> */}
       <Footer />
       {/* Main Content */}
