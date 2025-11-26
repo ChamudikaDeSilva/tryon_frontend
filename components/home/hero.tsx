@@ -107,7 +107,7 @@ export default function Hero() {
         className="hero-grid absolute inset-0 z-0 pointer-events-none"
         style={{
           backgroundImage: `linear-gradient(#e2e8f0 1px, transparent 1px), linear-gradient(to right, #e2e8f0 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
+          backgroundSize: '40px 40px'
         }}
       />
 
